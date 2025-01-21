@@ -1,0 +1,17 @@
+{
+  "canisters": {
+    "rust-token-backend": {
+      "candid": "src/rust-token-backend/rust-token-backend.did",
+      "package": "rust-token-backend",
+      "type": "rust"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
