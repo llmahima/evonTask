@@ -1,0 +1,15 @@
+type Result = variant { Ok : text; Err : text };
+type Result_1 = variant { Ok : nat64; Err : text };
+type Transaction = record {
+  to : text;
+  from : text;
+  timestamp : nat64;
+  amount : nat64;
+};
+service : () -> {
+  create_account : (text, nat64) -> (Result);
+  get_balance : (text) -> (Result_1) query;
+  get_total_supply : () -> (nat64) query;
+  get_transaction_history : (text) -> (vec Transaction) query;
+  send_token : (text, text, nat64) -> (Result);
+}
